@@ -2,9 +2,9 @@ name: CI
 on:
   push:
     branches: [main]
-    paths-ignore: ['**.md', 'docs/**']
+    paths-ignore: ['**.md', 'docs/**', 'LICENSE']
   pull_request:
-    paths-ignore: ['**.md', 'docs/**']
+    paths-ignore: ['**.md', 'docs/**', 'LICENSE']
 permissions:
   contents: read
 # Actions minutes rules (ops/rules/actions-minutes.md, 2026-11-10): one run per change, drafts skipped, a timeout.
@@ -20,10 +20,16 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
+        if: hashFiles('package.json') != ''
         with:
           node-version: 24
           cache: npm
+      # Until the code lands (after tour v3) the repo holds only docs: skip rather than fail.
       - run: npm ci
+        if: hashFiles('package.json') != ''
       - run: npm run typecheck
+        if: hashFiles('package.json') != ''
       - run: npm test
+        if: hashFiles('package.json') != ''
       - run: npm run build
+        if: hashFiles('package.json') != ''

@@ -10,4 +10,5 @@ Dated decisions for this repo, newest last.
   - Order: "Phased (Recommended)". 0.1 ships printing with inspector editing and live preview; the drag-and-drop canvas follows in 0.2.
   - Thermal printer: "PDF + ZPL (if it's widely used)". ZPL is Zebra's language and the most common one for thermal label printers in shipping and labs, so ZPL is a proper output in 0.3. PDF stays the default for every printer.
   - Name: "Labels (Recommended)": `@captiveorigins/payload-plugin-labels`.
-- 2026-11-10 (Helm): this session (Kitting) leads the repo. It stays local and private until build time; the build starts after tour v3.
+- 2026-11-10 (Helm): this session (Kitting) leads the repo. The build starts after tour v3.
+- 2026-11-10 (owner, relayed verbatim by Helm from its chat, about 2:10 PM MST): "No private repos because CI". So this repo is public on GitHub under CaptiveOrigins from its first push, MIT, with the first-public-push audit ([first-public-push-audit.md](first-public-push-audit.md)) and the leak check in CI. It replaces the earlier plan to keep the repo local and private until the build.
