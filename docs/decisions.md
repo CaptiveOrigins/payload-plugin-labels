@@ -12,3 +12,5 @@ Dated decisions for this repo, newest last.
   - Name: "Labels (Recommended)": `@captiveorigins/payload-plugin-labels`.
 - 2026-11-10 (Helm): this session (Kitting) leads the repo. The build starts after tour v3.
 - 2026-11-10 (owner, relayed verbatim by Helm from its chat, about 2:10 PM MST): "No private repos because CI". So this repo is public on GitHub under CaptiveOrigins from its first push, MIT, with the first-public-push audit ([first-public-push-audit.md](first-public-push-audit.md)) and the leak check in CI. It replaces the earlier plan to keep the repo local and private until the build.
+- 2026-11-10 (owner, relayed by Helm): there's no QR on the tube. The kit labels are the kit's outer bag (about 4 × 6 in), the kit's box, and the shipping box, which is reused for the return. So the 4 × 6 in thermal preset comes first, and the kits presets are bag, box, shipping box and batch.
+- 2026-11-10: the provider contract moves to the first day of 0.1 (it was 0.3), so Kits can build its templates against it while Labels is built.

@@ -52,7 +52,7 @@ What you print on: a thermal roll or a sheet.
 - **Thermal:** label width and height, gap, printer resolution (203, 300 or 600 dpi), and a calibration offset in x and y.
 - **Sheet:** page size (US Letter or A4), columns, rows, label width and height, top and left margins, horizontal and vertical pitch, corner radius (for the preview only), and a calibration offset.
 
-The plugin ships presets as code: Avery 5160, 5163, 5167 and 94207, plus A4 L7160 sheets, and the common thermal sizes (2 × 1 in, 2.25 × 1.25 in, 4 × 6 in, DYMO 30252). A preset is copied into an editable record only when someone picks it, so nothing appears that nobody asked for. A **calibration page** (rulers and corner marks) shows how far a printer is off, and the offset fixes it.
+The plugin ships presets as code: Avery 5160, 5163, 5167 and 94207, plus A4 L7160 sheets, and the common thermal sizes (4 × 6 in first, then 2 × 1 in, 2.25 × 1.25 in and DYMO 30252). A preset is copied into an editable record only when someone picks it, so nothing appears that nobody asked for. A **calibration page** (rulers and corner marks) shows how far a printer is off, and the offset fixes it.
 
 ### `label-prints` (collection, a log)
 
@@ -150,7 +150,7 @@ Presets in the first round:
 | --- | --- | --- |
 | Kitting | Built unit (external ID barcode, recipe, built on, lots, use-by), supply lot (item, lot, use-by), shelf label (name, SKU, reorder level, QR to its admin page) | All labels for a build batch |
 | Restock | Receiving label (PO number, supplier, item, received on, lot) | All labels for a received order |
-| Captive Origins kits (the site's own code, in the platform) | Kit tube label (kit code as Code 128 plus text, lot, expiry), order box label | All labels for this order (box plus every kit), all labels for this kit |
+| Captive Origins kits (the site's own code, in the platform) | Kit bag label (4 × 6 in thermal: kit code as Code 128 plus text, lot, expiry), kit box label, shipping box label (the box is reused for the return), batch label | All labels for this order (shipping box plus each kit's bag and box), all labels for this kit (bag and box) |
 | OneTaxonomy (wherever its Payload side lives) | Specimen or animal label (scientific name in italics, common name, ID, QR) | |
 
 Carrier shipping labels are not this plugin's job: they come from the carrier (EasyPost) as their own PDFs. A set can still list them, through a provider step that hands over an existing PDF. That would be phase 3, and only if wanted.
@@ -188,7 +188,7 @@ These are rough guesses of session days, not promises.
 
 | Phase | What | Days |
 | --- | --- | --- |
-| 0.1 | Engine (tokens, layout, sheets, PDF, barcodes); the three collections; print endpoint; print button and dialog with sets and start position; editing by inspector and layers list with live preview; presets as code; tests | 5–6 |
+| 0.1 | The provider contract (`src/contracts/labels.ts`, types only) on day 1, so others can build against it; engine (tokens, layout, sheets, PDF, barcodes); the three collections; print endpoint; print button and dialog with sets and start position; editing by inspector and layers list with live preview; presets as code; tests | 5–6 |
 | 0.2 | The drag-and-drop canvas with rulers, snapping, zoom and warnings; the calibration page | 3–4 |
 | 0.3 | ZPL; providers for Kitting, Restock, the site's kits and OneTaxonomy (crossings, each in its own repo); a set step that includes carrier PDFs, if wanted | 2–3 |
 | | Total | about 10–13 |
