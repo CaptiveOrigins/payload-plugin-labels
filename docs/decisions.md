@@ -14,3 +14,19 @@ Dated decisions for this repo, newest last.
 - 2026-11-10 (owner, relayed verbatim by Helm from its chat, about 2:10 PM MST): "No private repos because CI". So this repo is public on GitHub under CaptiveOrigins from its first push, MIT, with the first-public-push audit ([first-public-push-audit.md](first-public-push-audit.md)) and the leak check in CI. It replaces the earlier plan to keep the repo local and private until the build.
 - 2026-11-10 (owner, relayed by Helm): there's no QR on the tube. The kit labels are the kit's outer bag (about 4 × 6 in), the kit's box, and the shipping box, which is reused for the return. So the 4 × 6 in thermal preset comes first, and the kits presets are bag, box, shipping box and batch.
 - 2026-11-10: the provider contract moves to the first day of 0.1 (it was 0.3), so Kits can build its templates against it while Labels is built.
+
+## 2026-11-10: decision feed acknowledged (ops/decisions/all.md, captive-origins.md)
+
+Settled decisions from the owner, through Helm's feed. The feed holds the owner's exact words.
+
+- **D1** Settled decisions arrive through the feed and are acted on, not re-argued.
+- **D2** Build it right: agnostic plugins with optional adapters, best architecture first. This repo imports no other Captive Origins plugin.
+- **D3** Owner steps and tests go to `~/Code/ops/inbox/` per `ops/rules/owner-items.md`, never straight to needs-you.md or tests.md.
+- **D4** Priority: Docker media, Minecraft server, then all Captive Origins.
+- **D5** No private repos to save CI minutes. This repo is public, with the Actions-minutes rules.
+- **D6, D21** Plugin names need the owner's OK before work starts (ops/plugin-names.md). "Labels" is approved (2026-11-10).
+- **D7** No launch dates: work follows the priority list in ops/timeline-captive-origins.md. A freeze point is cut only when the owner says so.
+- **D8** Seed World hears about every collection-structure change ahead of time, with versions, and audits when it lands.
+- **D12** No plugin-family tags yet. None are in `package.json` keywords.
+- **D13** The activation QR goes on the kit bag label only, not the kit box label. The Kits presets in [design.md](design.md) say so.
+- Not for this repo: D9 (PM doc), D10 (tour before studbook), D11 (kids decide on guardian suggestions), D14 (plan B), D15 (Husbandry.Pro link), D16 (both views).

@@ -150,7 +150,7 @@ Presets in the first round:
 | --- | --- | --- |
 | Kitting | Built unit (external ID barcode, recipe, built on, lots, use-by), supply lot (item, lot, use-by), shelf label (name, SKU, reorder level, QR to its admin page) | All labels for a build batch |
 | Restock | Receiving label (PO number, supplier, item, received on, lot) | All labels for a received order |
-| Captive Origins kits (the site's own code, in the platform) | Kit bag label (4 × 6 in thermal: kit code as Code 128 plus text, lot, expiry), kit box label, shipping box label (the box is reused for the return), batch label | All labels for this order (shipping box plus each kit's bag and box), all labels for this kit (bag and box) |
+| Captive Origins kits (the site's own code, in the platform) | Kit bag label (4 × 6 in thermal: kit code as Code 128 plus text, lot, expiry, and the activation QR, which goes on the bag only, per D13), kit box label (no activation), shipping box label (the box is reused for the return), batch label | All labels for this order (shipping box plus each kit's bag and box), all labels for this kit (bag and box) |
 | OneTaxonomy (wherever its Payload side lives) | Specimen or animal label (scientific name in italics, common name, ID, QR) | |
 
 Carrier shipping labels are not this plugin's job: they come from the carrier (EasyPost) as their own PDFs. A set can still list them, through a provider step that hands over an existing PDF. That would be phase 3, and only if wanted.
