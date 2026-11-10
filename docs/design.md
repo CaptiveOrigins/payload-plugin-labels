@@ -195,8 +195,10 @@ These are rough guesses of session days, not promises.
 
 0.1 already does everything the owner listed except dragging elements on the canvas: you can pick the size and media, place token fields, see the label, and print one, some, or all labels for a document. Phase 2 makes the builder visual.
 
-## Open questions for the owner
+## Owner's answers (2026-11-10)
 
-1. **Order:** phased, so labels print after 0.1 and the canvas follows (recommended), or wait until the canvas is ready before any release?
-2. **The thermal printer you use:** Zebra (ZPL becomes useful), Rollo or another driver-only printer (PDF is enough), or not chosen yet?
-3. **Name:** Labels, `payload-plugin-labels` (recommended: plain, like our other plugins), or another?
+- **Order:** phased. 0.1 first, then the canvas in 0.2.
+- **Thermal printer:** PDF and ZPL. PDF is the default for every printer; ZPL is a proper output in 0.3.
+- **Name:** Labels, `@captiveorigins/payload-plugin-labels`.
+
+The exact words are in [decisions.md](decisions.md).
