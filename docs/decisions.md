@@ -30,3 +30,4 @@ Settled decisions from the owner, through Helm's feed. The feed holds the owner'
 - **D12** No plugin-family tags yet. None are in `package.json` keywords.
 - **D13** The activation QR goes on the kit bag label only, not the kit box label. The Kits presets in [design.md](design.md) say so.
 - Not for this repo: D9 (PM doc), D10 (tour before studbook), D11 (kids decide on guardian suggestions), D14 (plan B), D15 (Husbandry.Pro link), D16 (both views).
+- 2026-11-11 (Plugins Lead): categories are `admin-ui` and `ecommerce` (the fixed list in captive-origins `docs/plugin-tags.md`). GitHub topics set by hand for now, since there's no `package.json` yet: payload, payload-plugin, payloadcms, admin-ui, ecommerce, labels, printing, barcode, qr-code, thermal-printer, pdf. When the package is created, its `keywords` must be exactly these, in this order, so `packages:sync` keeps them.
