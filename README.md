@@ -12,6 +12,20 @@ Labels for Payload: design labels with field tokens in the admin, then print one
 - Labels show only fields the person printing may read.
 - Works on any Payload site by itself. Other plugins can offer ready-made labels through a small adapter, with no dependency either way.
 
+## On its own, and with others
+
+Nothing here is built yet, so this is the plan from [docs/design.md](docs/design.md).
+
+**On its own:** Labels will work on any Payload site with no other plugin. You design labels in the admin from your own collections' fields, and print them from each document.
+
+**Works with** (planned for 0.3, each through `config.custom.labels.providers`, with no import either way):
+- **Kitting:** ready-made labels for built units, supply lots and shelves.
+- **Restock:** a receiving label for each received order.
+- **Sample Kits:** kit bag, kit box, shipping box and lab batch labels. Its `adapters.labels` is already typed for this.
+- **OneTaxonomy:** offered through the same kind of adapter.
+
+**Family:** Labels sits in the Fulfillment family, with Kitting, Restock, Sample Kits, Shipping, Scan, Wizards, Custody and Sequences, though the families are a working draft and Fulfillment is due to be split into different groups.
+
 ## Install or build
 
 Not published yet. It will be `@captiveorigins/payload-plugin-labels` on npm.
