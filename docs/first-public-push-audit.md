@@ -12,7 +12,7 @@ Every commit was scanned, not just the latest files. The repo holds docs, the li
 | IP addresses, server or database hosts, deploy URLs | none |
 | Phone numbers, street addresses | none |
 | Real customer, supplier, kit or player data | none |
-| Home paths (`/Users/`), personal names | none in files or commit messages. Git's author field holds the full name, which `~/Code/CLAUDE.md` allows |
+| Home folder paths, personal names | none in files or commit messages. Git's author field holds the full name, which is allowed |
 | Claude session links in commit text | none |
 | Build output, packed files, `.env`, `.secrets/` | never committed |
 | Leak check in CI | yes, `.github/workflows/leak-check.yml`, on every change |
