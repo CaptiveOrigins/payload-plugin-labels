@@ -1,8 +1,8 @@
 # Labels: design (draft, 2026-11-10)
 
-A Payload plugin for internal labels: design a label once with field tokens, then print one, a few, or every label that belongs to a document, on a thermal roll or an Avery-style sheet. It works on any Payload site with no other plugin. When Kitting, Restock, the Captive Origins kits code or OneTaxonomy are on the same site, they offer ready-made templates and tokens through a small adapter, with no import between packages.
+A Payload plugin for internal labels: design a label once with field tokens, then print one, a few, or every label that belongs to a document, on a thermal roll or an Avery-style sheet. It works on any Payload site with no other plugin. When Kitting, Restock, a kits plugin or OneTaxonomy are on the same site, they offer ready-made templates and tokens through a small adapter, with no import between packages.
 
-Package: `@captiveorigins/payload-plugin-labels`, repo `payload-plugin-labels`, MIT. Build starts after tour v3 (owner, 2026-11-10). This is a design, not built code. Nothing here is tested yet.
+Package: `@extantape/payload-plugin-labels`, repo `payload-plugin-labels`, MIT. Build starts after tour v3 (owner, 2026-11-10). This is a design, not built code. Nothing here is tested yet.
 
 ## What the owner asked for (2026-11-10)
 
@@ -150,7 +150,7 @@ Presets in the first round:
 | --- | --- | --- |
 | Kitting | Built unit (external ID barcode, recipe, built on, lots, use-by), supply lot (item, lot, use-by), shelf label (name, SKU, reorder level, QR to its admin page) | All labels for a build batch |
 | Restock | Receiving label (PO number, supplier, item, received on, lot) | All labels for a received order |
-| Captive Origins kits (the site's own code, in the platform) | Kit bag label (4 × 6 in thermal: kit code as Code 128 plus text, lot, expiry, and the activation QR, which goes on the bag only, per D13), kit box label (no activation), shipping box label (the box is reused for the return), batch label | All labels for this order (shipping box plus each kit's bag and box), all labels for this kit (bag and box) |
+| A kits plugin on the first site | Kit bag label (4 × 6 in thermal: kit code as Code 128 plus text, lot, expiry, and the activation QR, which goes on the bag only), kit box label (no activation), shipping box label (the box is reused for the return), batch label | All labels for this order (shipping box plus each kit's bag and box), all labels for this kit (bag and box) |
 | OneTaxonomy (wherever its Payload side lives) | Specimen or animal label (scientific name in italics, common name, ID, QR) | |
 
 Carrier shipping labels are not this plugin's job: they come from the carrier (EasyPost) as their own PDFs. A set can still list them, through a provider step that hands over an existing PDF. That would be phase 3, and only if wanted.
@@ -180,7 +180,7 @@ Carrier shipping labels are not this plugin's job: they come from the carrier (E
   - the preview matches the PDF;
   - printing a set;
   - a partly used sheet.
-- **Real printers:** a thermal printer and a sheet printer are the owner's hands-on test (it goes on Helm's page).
+- **Real printers:** a thermal printer and a sheet printer are the owner's hands-on test.
 
 ## Phases and rough time
 
@@ -199,6 +199,6 @@ These are rough guesses of session days, not promises.
 
 - **Order:** phased. 0.1 first, then the canvas in 0.2.
 - **Thermal printer:** PDF and ZPL. PDF is the default for every printer; ZPL is a proper output in 0.3.
-- **Name:** Labels, `@captiveorigins/payload-plugin-labels`.
+- **Name:** Labels, `@extantape/payload-plugin-labels`.
 
 The exact words are in [decisions.md](decisions.md).

@@ -28,7 +28,7 @@ Nothing here is built yet, so this is the plan from [docs/design.md](docs/design
 
 ## Install or build
 
-Not published yet. It will be `@captiveorigins/payload-plugin-labels` on npm.
+Not published yet. It will be `@extantape/payload-plugin-labels` on npm.
 
 ## License
 

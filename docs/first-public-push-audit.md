@@ -16,7 +16,7 @@ Every commit was scanned, not just the latest files. The repo holds docs, the li
 | Claude session links in commit text | none |
 | Build output, packed files, `.env`, `.secrets/` | never committed |
 | Leak check in CI | yes, `.github/workflows/leak-check.yml`, on every change |
-| LICENSE | MIT, "Copyright (c) 2026 Captive Origins" |
+| LICENSE | MIT, now "Copyright (c) 2026 EXTANT APE" |
 | README status line | yes: design only, nothing tested |
 
 Result: clean. Nothing needed rewriting.
